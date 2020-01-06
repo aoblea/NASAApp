@@ -3,27 +3,44 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		AE7628E423BD9F720093C8FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7628E323BD9F720093C8FA /* AppDelegate.swift */; };
 		AE7628E623BD9F720093C8FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7628E523BD9F720093C8FA /* SceneDelegate.swift */; };
-		AE7628E823BD9F720093C8FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7628E723BD9F720093C8FA /* ViewController.swift */; };
-		AE7628EB23BD9F720093C8FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7628E923BD9F720093C8FA /* Main.storyboard */; };
 		AE7628ED23BD9F770093C8FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE7628EC23BD9F770093C8FA /* Assets.xcassets */; };
 		AE7628F023BD9F770093C8FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7628EE23BD9F770093C8FA /* LaunchScreen.storyboard */; };
+		AE7628FA23BEC3AE0093C8FA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7628F923BEC3AE0093C8FA /* MainViewController.swift */; };
+		AE76290023BED1890093C8FA /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7628FF23BED1890093C8FA /* UIColor+Extension.swift */; };
+		AE76290323BF9A550093C8FA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76290223BF9A550093C8FA /* Endpoint.swift */; };
+		AE76290523BF9D690093C8FA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76290423BF9D690093C8FA /* APIClient.swift */; };
+		AE76290723BFBA090093C8FA /* NASAEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76290623BFBA090093C8FA /* NASAEndpoint.swift */; };
+		AE76290923BFBA120093C8FA /* NASAClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76290823BFBA120093C8FA /* NASAClient.swift */; };
+		AE76290B23C00AFF0093C8FA /* MarsPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76290A23C00AFF0093C8FA /* MarsPhotos.swift */; };
+		AE76290D23C03FC50093C8FA /* MarsRoverPhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76290C23C03FC50093C8FA /* MarsRoverPhotosCollectionViewController.swift */; };
+		AE76290F23C042410093C8FA /* EditPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76290E23C042410093C8FA /* EditPhotoViewController.swift */; };
+		AE76291123C179D80093C8FA /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE76291023C179D80093C8FA /* PhotoCollectionViewCell.swift */; };
+		AEB91C5023C3952200888C0A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AEB91C4F23C3952200888C0A /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AE7628E023BD9F720093C8FA /* NASA App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7628E323BD9F720093C8FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE7628E523BD9F720093C8FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AE7628E723BD9F720093C8FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AE7628EA23BD9F720093C8FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE7628EC23BD9F770093C8FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE7628EF23BD9F770093C8FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE7628F123BD9F770093C8FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE7628F923BEC3AE0093C8FA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AE7628FF23BED1890093C8FA /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		AE76290223BF9A550093C8FA /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		AE76290423BF9D690093C8FA /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		AE76290623BFBA090093C8FA /* NASAEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAEndpoint.swift; sourceTree = "<group>"; };
+		AE76290823BFBA120093C8FA /* NASAClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAClient.swift; sourceTree = "<group>"; };
+		AE76290A23C00AFF0093C8FA /* MarsPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotos.swift; sourceTree = "<group>"; };
+		AE76290C23C03FC50093C8FA /* MarsRoverPhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverPhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		AE76290E23C042410093C8FA /* EditPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoViewController.swift; sourceTree = "<group>"; };
+		AE76291023C179D80093C8FA /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEB91C5023C3952200888C0A /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +74,63 @@
 		AE7628E223BD9F720093C8FA /* NASA App */ = {
 			isa = PBXGroup;
 			children = (
+				AE76290123BF9A460093C8FA /* Networking */,
+				AE7628FE23BED1630093C8FA /* Extension */,
+				AE7628FD23BED15C0093C8FA /* Model */,
+				AE7628FC23BED1580093C8FA /* View */,
+				AE7628FB23BED1430093C8FA /* Controller */,
 				AE7628E323BD9F720093C8FA /* AppDelegate.swift */,
 				AE7628E523BD9F720093C8FA /* SceneDelegate.swift */,
-				AE7628E723BD9F720093C8FA /* ViewController.swift */,
-				AE7628E923BD9F720093C8FA /* Main.storyboard */,
 				AE7628EC23BD9F770093C8FA /* Assets.xcassets */,
 				AE7628EE23BD9F770093C8FA /* LaunchScreen.storyboard */,
 				AE7628F123BD9F770093C8FA /* Info.plist */,
 			);
 			path = "NASA App";
+			sourceTree = "<group>";
+		};
+		AE7628FB23BED1430093C8FA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AE7628F923BEC3AE0093C8FA /* MainViewController.swift */,
+				AE76290C23C03FC50093C8FA /* MarsRoverPhotosCollectionViewController.swift */,
+				AE76290E23C042410093C8FA /* EditPhotoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AE7628FC23BED1580093C8FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE76291023C179D80093C8FA /* PhotoCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AE7628FD23BED15C0093C8FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE76290A23C00AFF0093C8FA /* MarsPhotos.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE7628FE23BED1630093C8FA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AE7628FF23BED1890093C8FA /* UIColor+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		AE76290123BF9A460093C8FA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AE76290223BF9A550093C8FA /* Endpoint.swift */,
+				AE76290423BF9D690093C8FA /* APIClient.swift */,
+				AE76290623BFBA090093C8FA /* NASAEndpoint.swift */,
+				AE76290823BFBA120093C8FA /* NASAClient.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +149,9 @@
 			dependencies = (
 			);
 			name = "NASA App";
+			packageProductDependencies = (
+				AEB91C4F23C3952200888C0A /* Kingfisher */,
+			);
 			productName = "NASA App";
 			productReference = AE7628E023BD9F720093C8FA /* NASA App.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +180,9 @@
 				Base,
 			);
 			mainGroup = AE7628D723BD9F720093C8FA;
+			packageReferences = (
+				AEB91C4E23C3952200888C0A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = AE7628E123BD9F720093C8FA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +199,6 @@
 			files = (
 				AE7628F023BD9F770093C8FA /* LaunchScreen.storyboard in Resources */,
 				AE7628ED23BD9F770093C8FA /* Assets.xcassets in Resources */,
-				AE7628EB23BD9F720093C8FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +209,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE7628E823BD9F720093C8FA /* ViewController.swift in Sources */,
+				AE7628FA23BEC3AE0093C8FA /* MainViewController.swift in Sources */,
+				AE76290F23C042410093C8FA /* EditPhotoViewController.swift in Sources */,
+				AE76290D23C03FC50093C8FA /* MarsRoverPhotosCollectionViewController.swift in Sources */,
 				AE7628E423BD9F720093C8FA /* AppDelegate.swift in Sources */,
+				AE76290723BFBA090093C8FA /* NASAEndpoint.swift in Sources */,
+				AE76291123C179D80093C8FA /* PhotoCollectionViewCell.swift in Sources */,
 				AE7628E623BD9F720093C8FA /* SceneDelegate.swift in Sources */,
+				AE76290B23C00AFF0093C8FA /* MarsPhotos.swift in Sources */,
+				AE76290023BED1890093C8FA /* UIColor+Extension.swift in Sources */,
+				AE76290923BFBA120093C8FA /* NASAClient.swift in Sources */,
+				AE76290323BF9A550093C8FA /* Endpoint.swift in Sources */,
+				AE76290523BF9D690093C8FA /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AE7628E923BD9F720093C8FA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AE7628EA23BD9F720093C8FA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AE7628EE23BD9F770093C8FA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -336,6 +408,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AEB91C4E23C3952200888C0A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AEB91C4F23C3952200888C0A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AEB91C4E23C3952200888C0A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AE7628D823BD9F720093C8FA /* Project object */;
 }
