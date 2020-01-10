@@ -61,8 +61,8 @@ class NASA_AppTests: XCTestCase {
     var retrievedObject: EarthImagery?
     var responseError: Error?
     
-    var testLatitude: String = "40.725058"
-    var testLongitude: String = "73.999037"
+    let testLatitude: String = "40.725058"
+    let testLongitude: String = "73.999037"
     
     client.getEarthImagery(latitude: testLatitude, longitude: testLongitude) { (results) in
       switch results {
