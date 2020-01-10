@@ -16,11 +16,11 @@ class NASAClient: APIClient {
     return decoder
   }()
   
+  // API Key required for url request, set to private because this is the only place that it will be used.
   private let apiKey: String = "xCieywUphIaacqI9FG4hkAtpdTClyiyE3lIO9a6F"
   
   init(configuration: URLSessionConfiguration) {
     self.session = URLSession(configuration: configuration)
-    
   }
   
   convenience init() {
@@ -30,17 +30,14 @@ class NASAClient: APIClient {
   func getMarsPhotos(completion: @escaping (Result<MarsPhotos, APIError>) -> Void) {
     let endpoint = NASAEndpoint.marsPhotos(key: apiKey)
     let request = endpoint.request
-//  print(request)
-//  resulting request string
-//  https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=xCieywUphIaacqI9FG4hkAtpdTClyiyE3lIO9a6F
+
     fetch(with: request, completion: completion)
   }
+
+  func getEarthImagery(latitude: String, longitude: String, completion: @escaping (Result<EarthImagery, APIError>) -> Void) {
+    let endpoint = NASAEndpoint.earthImagery(lat: latitude, lon: longitude, key: apiKey)
+    let request = endpoint.request
   
-  func getImageData(with photo: Photo, completion: @escaping (Result<Data, APIError>) -> Void) {
-    let source = photo.imageSource
-    guard let url = URL(string: source) else { return }
-    let request = URLRequest(url: url)
-    print(request)
     fetch(with: request, completion: completion)
   }
 

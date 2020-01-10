@@ -8,7 +8,6 @@
 
 import UIKit
 
-//
 struct MarsPhotos: Decodable {
   let photos: [Photo]
   
@@ -28,15 +27,9 @@ struct Photo: Decodable {
   let imageSource: String
   let earthDate: String
   
-  // Image Setup
-  enum ImageDownloadState {
-    case placeholder, downloaded, failed
-  }
-  
-  var image: UIImage? = nil
-  var imageState: ImageDownloadState = .placeholder
+  var image: UIImage?
 
-  private enum PhotosCodingKeys: String, CodingKey {
+  private enum PhotoCodingKeys: String, CodingKey {
     case id
     case sol
     case imgsrc = "img_src"
@@ -44,11 +37,10 @@ struct Photo: Decodable {
   }
 
   init(from decoder: Decoder) throws {
-    let container = try decoder.container(keyedBy: PhotosCodingKeys.self)
+    let container = try decoder.container(keyedBy: PhotoCodingKeys.self)
     self.id = try container.decode(Int.self, forKey: .id)
     self.sol = try container.decode(Int.self, forKey: .sol)
     self.imageSource = try container.decode(String.self, forKey: .imgsrc)
     self.earthDate = try container.decode(String.self, forKey: .earthdate)
   }
-  
 }

@@ -10,7 +10,9 @@ import UIKit
 
 class MainViewController: UIViewController {
   // MARK: - Properties
+  
   lazy var client = NASAClient()
+  lazy var locationManager = LocationManager.sharedInstance
   
   lazy var flowLayout: UICollectionViewFlowLayout = {
     let spacing: CGFloat = 2.0
@@ -29,7 +31,7 @@ class MainViewController: UIViewController {
   lazy var postCardMakerButton: UIButton = {
     let button = UIButton()
     button.setTitle("Rover Postcard Maker", for: .normal)
-    button.backgroundColor = UIColor.red
+    button.setBackgroundImage(UIImage(named: "mars_rover"), for: .normal)
     button.addTarget(self, action: #selector(handlePostCardMakerButton), for: .touchUpInside)
     button.translatesAutoresizingMaskIntoConstraints = false
     return button
@@ -38,7 +40,8 @@ class MainViewController: UIViewController {
   lazy var eyeInTheSkyButton: UIButton = {
     let button = UIButton()
     button.setTitle("Eye In The Sky", for: .normal)
-    button.backgroundColor = UIColor.blue
+    button.setBackgroundImage(UIImage(named: "eye_in_the_sky"), for: .normal)
+    button.setTitleColor(UIColor.black, for: .normal)
     button.addTarget(self, action: #selector(handleEyeInTheSkyButton), for: .touchUpInside)
     button.translatesAutoresizingMaskIntoConstraints = false
     return button
@@ -57,22 +60,25 @@ class MainViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    locationManager.requestLocationAuthorization()
     setupNavBar()
     setupUI()
-
+    
   }
   
   private func setupNavBar() {
-    title = "NASA App"
     navigationController?.navigationBar.barTintColor = UIColor.AppTheme.oxfordBlue
     navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.AppTheme.isabelline]
   }
   
   private func setupUI() {
+    title = "NASA App"
+    
     menuStackView.addArrangedSubview(postCardMakerButton)
     menuStackView.addArrangedSubview(eyeInTheSkyButton)
     view.addSubview(menuStackView)
     
+    // Constraints
     NSLayoutConstraint.activate([
       menuStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
       menuStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -81,31 +87,28 @@ class MainViewController: UIViewController {
     ])
   }
   
+  // Send user to Postcard Maker feature
   @objc private func handlePostCardMakerButton() {
-    print("go to post card maker")
     let marsRoverPhotoCVC = MarsRoverPhotosCollectionViewController(collectionViewLayout: flowLayout)
     
+    // Begin fetching photos while transitioning to next viewcontroller
     client.getMarsPhotos { (results) in
       switch results {
       case .success(let marsPhotos):
-        DispatchQueue.main.async {
-          marsRoverPhotoCVC.photos = marsPhotos.photos
-
-          if marsRoverPhotoCVC.photos.count == marsPhotos.photos.count {
-            marsRoverPhotoCVC.collectionView.reloadData()
-            print("Completed transferring \(marsPhotos.photos.count) photos.")
-          }
-        }
+        marsRoverPhotoCVC.photos = marsPhotos.photos
+        marsRoverPhotoCVC.collectionView.reloadData()
       case .failure(let error):
-        print("\(error)")
+        self.presentAlert(title: "Networking Error", message: "\(error.localizedDescription)")
       }
     }
     
     self.navigationController?.pushViewController(marsRoverPhotoCVC, animated: true)
   }
   
+  // Send user to Eye In The Sky feature
   @objc private func handleEyeInTheSkyButton() {
-    print("go to eye in the sky")
+    let eyeInTheSkyVC = EyeInTheSkyViewController()
+    self.navigationController?.pushViewController(eyeInTheSkyVC, animated: true)
   }
 
 }

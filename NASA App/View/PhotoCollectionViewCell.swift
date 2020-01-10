@@ -26,6 +26,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
   override func layoutSubviews() {
     super.layoutSubviews()
     
+    // Contraints
     NSLayoutConstraint.activate([
       contentView.leadingAnchor.constraint(equalTo: photoView.leadingAnchor),
       contentView.topAnchor.constraint(equalTo: photoView.topAnchor),
