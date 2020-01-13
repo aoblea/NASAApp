@@ -44,7 +44,6 @@ class EyeInTheSkyViewController: UIViewController, UISearchControllerDelegate, U
 
     setupUI()
     setupSearchBar()
- 
   }
     
   private func setupUI() {
@@ -79,6 +78,6 @@ class EyeInTheSkyViewController: UIViewController, UISearchControllerDelegate, U
     navigationItem.searchController = searchController
     navigationItem.hidesSearchBarWhenScrolling = false
     definesPresentationContext = true
-  }
+  } 
   
 }
