@@ -102,9 +102,10 @@ class LocationSearchResultsTableViewController: UITableViewController, UISearchR
       let request = MKLocalSearch.Request()
       request.naturalLanguageQuery = searchText
       
+      
       let search = MKLocalSearch(request: request)
       search.start { [unowned self] (response, error) in
-        guard let resp = response else { return self.presentAlert(title: "Networking Error", message: "\(error!.localizedDescription)")}
+        guard let resp = response else { return }
         
         self.searchResults.removeAll()
         self.searchResults.append(contentsOf: resp.mapItems)

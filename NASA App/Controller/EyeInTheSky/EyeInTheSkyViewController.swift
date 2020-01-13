@@ -44,6 +44,7 @@ class EyeInTheSkyViewController: UIViewController, UISearchControllerDelegate, U
 
     setupUI()
     setupSearchBar()
+ 
   }
     
   private func setupUI() {
